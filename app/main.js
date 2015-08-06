@@ -20,18 +20,19 @@ app.on('ready', function () {
         x: mainWindowState.x,
         y: mainWindowState.y,
         width: mainWindowState.width,
-        height: mainWindowState.height
+        height: mainWindowState.height,
+        fullscreen: true
     });
 
     if (mainWindowState.isMaximized) {
         mainWindow.maximize();
     }
 
-    mainWindow.loadUrl('file://' + __dirname + '/app.html');
+    mainWindow.loadUrl('https://design.atlasforworkforce.com/livechat/index.php/site_admin/');
 
     if (env.name === 'development') {
         devHelper.setDevMenu();
-        mainWindow.openDevTools();
+        // mainWindow.openDevTools();
     }
 
     mainWindow.on('close', function () {
