@@ -28,7 +28,7 @@ app.on('ready', function () {
         mainWindow.maximize();
     }
 
-    mainWindow.loadUrl('https://design.atlasforworkforce.com/livechat/index.php/site_admin/');
+      mainWindow.loadUrl('file://' + __dirname + '/app.html');
 
     if (env.name === 'development') {
         devHelper.setDevMenu();
