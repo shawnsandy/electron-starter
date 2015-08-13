@@ -1,3 +1,11 @@
+# Electron-Sarter Advanced
+
+ESA adds some aditional featuers to the original [Electron Starter Boilerplate](https://github.com/szwacz/electron-boilerplate)
+
+- Copy & Paste for macs
+- Tabs
+- more soon
+
 electron-boilerplate
 ==============
 Comprehensive boilerplate application for [Electron](http://electron.atom.io).  
