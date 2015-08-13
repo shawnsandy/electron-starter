@@ -1,0 +1,23 @@
+{
+  "name": "electron-start-kit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shawnsandy/electron-starter",
+  "authors": [
+    "Shawn Sandy <shawnsandy04@gmail.com>"
+  ],
+  "description": "Feature rich Electron Starter Kit, based on the electron-starter",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "electron"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
