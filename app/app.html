@@ -5,7 +5,7 @@
     <title>Atlas Live Chat</title>
 
     <link href="./stylesheets/main.css" rel="stylesheet" type="text/css">
-  
+
 
     <script src="vendor/electron_boilerplate/env_config.js"></script>
     <script src="vendor/electron_boilerplate/context_menu.js"></script>
@@ -15,7 +15,7 @@
     <script>
         requirejs(['app'], function (app) {});
     </script>
-  <link rel="stylesheet" type="text/css" href="/app/packages/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -27,21 +27,5 @@
             You are in <strong id="env-name"></strong> environment.
         </p>
     </div>
-
-<script>
-var remote = require('remote');
-var Menu = remote.require('menu');
-var MenuItem = remote.require('menu-item');
-
-var menu = new Menu();
-menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
-menu.append(new MenuItem({ type: 'separator' }));
-menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
-
-window.addEventListener('contextmenu', function (e) {
-  e.preventDefault();
-  menu.popup(remote.getCurrentWindow());
-}, false);
-</script>
 </body>
 </html>
