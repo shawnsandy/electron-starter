@@ -49,7 +49,6 @@
     "gulp-watch": "^4.3.4",
     "map-stream": "0.0.6",
     "require-dot-file": "^0.4.0",
-    "semantic-ui": "^2.0.8",
     "yamljs": "^0.2.3"
   }
 }
