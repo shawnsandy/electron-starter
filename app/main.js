@@ -13,8 +13,8 @@ var mainWindow;
 
 // Preserver of the window size and position between app launches.
 var mainWindowState = windowStateKeeper('main', {
-    width: 1000,
-    height: 600
+    width: 400,
+    height: 600,
 });
 
 app.on('ready', function() {
@@ -34,7 +34,7 @@ app.on('ready', function() {
 
     if (env.name === 'development') {
         devHelper.setDevMenu();
-        mainWindow.openDevTools();
+        //mainWindow.openDevTools();
     }
 
     mainWindow.on('close', function() {
@@ -46,6 +46,8 @@ app.on('ready', function() {
         width: 400,
         height: 400,
         show: false,
+        x: 0,
+        y: 0,
         frame: false
     });
     appWindow.loadUrl('file://' + __dirname + '/app-window.html');
@@ -60,6 +62,23 @@ app.on('ready', function() {
         else
             appWindow.show();
     })
+
+    // launch a webview
+    var webPage = new BrowserWindow({
+      width: 1024,
+      height: 768,
+      frame: false,
+      show: false
+    });
+
+    webPage.loadUrl('file://' + __dirname + '/web-page.html');
+
+    ipc.on('webview', function(){
+      if(webPage.isVisible())
+      webPage.hide();
+      else
+      webPage.show();
+    });
 
     // Create the Application's main menu
     var template = [{

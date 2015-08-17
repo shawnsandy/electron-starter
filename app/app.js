@@ -25,3 +25,9 @@ launchBtn.addEventListener('click', function(e){
   //console.log('launchBtn clicked');
   ipc.send('toggle-window');
 });
+
+
+var launchWeb = document.getElementById('launch-web');
+launchWeb.addEventListener('click', function(){
+  ipc.send('webview');
+});
