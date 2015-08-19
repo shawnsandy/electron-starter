@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Electron Boilerplate</title>
+    <title>Atlas Live Chat</title>
 
     <link href="./stylesheets/main.css" rel="stylesheet" type="text/css">
+
 
     <script src="vendor/electron_boilerplate/env_config.js"></script>
     <script src="vendor/electron_boilerplate/context_menu.js"></script>
@@ -14,19 +15,26 @@
     <script>
         requirejs(['app'], function (app) {});
     </script>
-
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-
     <div class="container">
         <h1 id="greet"></h1>
         <p class="subtitle">
             Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this magnificent <strong id="platform-info"></strong> machine.
         </p>
+
         <p class="subtitle">
             You are in <strong id="env-name"></strong> environment.
         </p>
+        <hr>
+        <h1>Sample App</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, delectus.</p>
+        <button id="launch-btn">Launch Window</button>
+        <hr>
+        <h1>Sample App</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, delectus.</p>
+        <button id="launch-web">Launch Webview</button>
     </div>
-
 </body>
 </html>
