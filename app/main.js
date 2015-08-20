@@ -41,38 +41,6 @@ app.on('ready', function() {
         mainWindowState.saveState(mainWindow);
     });
 
-    //launch new window
-    var appWindow = new BrowserWindow({
-        width: 400,
-        height: 400,
-        show: false
-    });
-    appWindow.loadUrl('file://' + __dirname + '/app-launch.html');
-
-    ipc.on('toggle-window', function() {
-        if (appWindow.isVisible())
-            appWindow.hide();
-        else
-            appWindow.show();
-    })
-
-    // launch a webview
-    var webPage = new BrowserWindow({
-      width: 1024,
-      height: 768,
-      frame: false,
-      show: false
-    });
-
-    webPage.loadUrl('file://' + __dirname + '/pages/web-page.html');
-
-    ipc.on('webview', function(){
-      if(webPage.isVisible())
-      webPage.hide();
-      else
-      webPage.show();
-    });
-
     // Create the Application's main menu
     var template = [{
         label: "Application",
