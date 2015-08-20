@@ -16,6 +16,8 @@ var paths = {
     jsCodeToTranspile: [
         'app/**/*.js',
         '!app/main.js',
+        '!app/kiosk.js',
+        '!app/tray.js',
         '!app/spec.js',
         '!app/node_modules/**',
         '!app/bower_components/**',
@@ -23,6 +25,8 @@ var paths = {
     ],
     copyFromAppDir: [
         './main.js',
+        './kiosk.js',
+        './tray.js',
         './spec.js',
         './node_modules/**',
         './bower_components/**',
