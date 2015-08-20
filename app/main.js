@@ -14,7 +14,7 @@ var mainWindow;
 // Preserver of the window size and position between app launches.
 var mainWindowState = windowStateKeeper('main', {
     width: 400,
-    height: 600
+    height: 300
 });
 
 app.on('ready', function() {
@@ -45,16 +45,9 @@ app.on('ready', function() {
     var appWindow = new BrowserWindow({
         width: 400,
         height: 400,
-        show: false,
-        x: 0,
-        y: 0,
-        frame: false
+        show: false
     });
-    appWindow.loadUrl('file://' + __dirname + '/ui/app-win.html');
-
-    appWindow.on('closed', function() {
-        appWindow = null;
-    });
+    appWindow.loadUrl('file://' + __dirname + '/app-launch.html');
 
     ipc.on('toggle-window', function() {
         if (appWindow.isVisible())
@@ -68,11 +61,10 @@ app.on('ready', function() {
       width: 1024,
       height: 768,
       frame: false,
-      show: false,
-      'skip-taskbar': true
+      show: false
     });
 
-    webPage.loadUrl('file://' + __dirname + '/ui/web-page.html');
+    webPage.loadUrl('file://' + __dirname + '/pages/web-page.html');
 
     ipc.on('webview', function(){
       if(webPage.isVisible())
