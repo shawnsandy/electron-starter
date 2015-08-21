@@ -30,7 +30,7 @@ app.on('ready', function() {
         mainWindow.maximize();
     }
 
-    mainWindow.loadUrl('file://' + __dirname + '/kiosk.html');
+    mainWindow.loadUrl('file://' + __dirname + '/tray.html');
 
     if (env.name === 'development') {
         devHelper.setDevMenu();
