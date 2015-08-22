@@ -10,6 +10,11 @@ import { greet } from './hello_world/hello_world';
 var os = require('os');
 var ipc = require('ipc');
 
+var remote = require('remote');
+
+//create the context/right click menu
+var ContextMenu = require('./js/context-menu');
+ContextMenu.contextMenu();
 
 // window.env contains data from config/env_XXX.json file.
 var envName = window.env.name;

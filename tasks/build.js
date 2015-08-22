@@ -21,6 +21,7 @@ var paths = {
         '!app/launch.js',
         '!app/spec.js',
         '!app/node_modules/**',
+        '!app/js/**',
         '!app/bower_components/**',
         '!app/vendor/**'
     ],
@@ -33,6 +34,7 @@ var paths = {
         './node_modules/**',
         './bower_components/**',
         './vendor/**',
+        './js/**',
         './**/*.html'
     ],
 }
