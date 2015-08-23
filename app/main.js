@@ -8,7 +8,16 @@ var env = require('./vendor/electron_boilerplate/env_config');
 //var devHelper = require('./vendor/electron_boilerplate/dev_helper');
 var mainMenu = require('./js/main-menu');
 var windowStateKeeper = require('./vendor/electron_boilerplate/window_state');
+//crash reporter
+var crashReporter = require('crash-reporter');
 
+
+crashReporter.start({
+    productName: 'YourName',
+    companyName: 'YourCompany',
+    submitUrl: 'https://your-domain.com/url-to-submit',
+    autoSubmit: true
+});
 
 var mainWindow;
 
@@ -25,6 +34,8 @@ app.on('ready', function() {
         y: mainWindowState.y,
         width: mainWindowState.width,
         height: mainWindowState.height,
+        icon: __dirname + '/images/icons/neutron.png',
+        frame: false
     });
 
     if (mainWindowState.isMaximized) {
