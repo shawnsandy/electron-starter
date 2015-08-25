@@ -35,7 +35,8 @@ app.on('ready', function() {
         width: mainWindowState.width,
         height: mainWindowState.height,
         icon: __dirname + '/images/icons/neutron.png',
-        resizable: true
+        resizable: true,
+        title: "DesKit"
     });
 
     if (mainWindowState.isMaximized) {

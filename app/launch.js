@@ -24,6 +24,7 @@ app.on('ready', function() {
         y: mainWindowState.y,
         width: mainWindowState.width,
         height: mainWindowState.height,
+        title: 'DesKit Launch Demos'
     });
 
     if (mainWindowState.isMaximized) {
