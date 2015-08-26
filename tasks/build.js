@@ -20,6 +20,7 @@ var paths = {
         '!app/tray.js',
         '!app/launch.js',
         '!app/web-view.js',
+        '!app/index.js',
         '!app/spec.js',
         '!app/node_modules/**',
         '!app/js/**',
@@ -32,6 +33,7 @@ var paths = {
         './tray.js',
         './launch.js',
         './web-view.js',
+        './index.js',
         './spec.js',
         './node_modules/**',
         './bower_components/**',
@@ -62,22 +64,22 @@ gulp.task('copy-watch', copyTask);
 
 var transpileTask = function () {
     return gulp.src(paths.jsCodeToTranspile)
-    .pipe(map(function(code, filename) {
-        try {
-            var transpiled = esperanto.toAmd(code.toString(), { strict: true });
-        } catch (err) {
-            throw new Error(err.message + ' ' + filename);
-        }
-        return transpiled.code;
-    }))
-    .pipe(gulp.dest(destDir.path()));
+        .pipe(map(function(code, filename) {
+            try {
+                var transpiled = esperanto.toAmd(code.toString(), { strict: true });
+            } catch (err) {
+                throw new Error(err.message + ' ' + filename);
+            }
+            return transpiled.code;
+        }))
+        .pipe(gulp.dest(destDir.path()));
 };
 gulp.task('transpile', ['clean'], transpileTask);
 gulp.task('transpile-watch', transpileTask);
 
 
 var lessTask = function () {
-    return gulp.src('app/stylesheets/main.less')
+    return gulp.src('app/stylesheets/*.less')
     .pipe(less())
     .pipe(gulp.dest(destDir.path('stylesheets')));
 };
