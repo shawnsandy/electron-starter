@@ -1,9 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
+var babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
-var esperanto = require('esperanto');
-var map = require('vinyl-map');
 var jetpack = require('fs-jetpack');
 
 var utils = require('./utils');
@@ -19,8 +19,11 @@ var paths = {
         '!app/kiosk.js',
         '!app/tray.js',
         '!app/launch.js',
+        '!app/web-view.js',
+        '!app/index.js',
         '!app/spec.js',
         '!app/node_modules/**',
+        '!app/js/**',
         '!app/bower_components/**',
         '!app/vendor/**'
     ],
@@ -29,10 +32,13 @@ var paths = {
         './kiosk.js',
         './tray.js',
         './launch.js',
+        './web-view.js',
+        './index.js',
         './spec.js',
         './node_modules/**',
         './bower_components/**',
         './vendor/**',
+        './js/**',
         './**/*.html'
     ],
 }
@@ -58,24 +64,19 @@ gulp.task('copy-watch', copyTask);
 
 var transpileTask = function () {
     return gulp.src(paths.jsCodeToTranspile)
-    .pipe(map(function(code, filename) {
-        try {
-            var transpiled = esperanto.toAmd(code.toString(), { strict: true });
-        } catch (err) {
-            throw new Error(err.message + ' ' + filename);
-        }
-        return transpiled.code;
-    }))
-    .pipe(gulp.dest(destDir.path()));
+        .pipe(sourcemaps.init())
+        .pipe(babel({ modules: 'amd' }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(destDir.path()));
 };
 gulp.task('transpile', ['clean'], transpileTask);
 gulp.task('transpile-watch', transpileTask);
 
 
 var lessTask = function () {
-    return gulp.src('app/stylesheets/main.less')
-    .pipe(less())
-    .pipe(gulp.dest(destDir.path('stylesheets')));
+    return gulp.src('app/stylesheets/*.less')
+        .pipe(less())
+        .pipe(gulp.dest(destDir.path('stylesheets')));
 };
 gulp.task('less', ['clean'], lessTask);
 gulp.task('less-watch', lessTask);
