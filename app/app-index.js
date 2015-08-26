@@ -23,8 +23,8 @@ var mainWindow;
 
 // Preserver of the window size and position between app launches.
 var mainWindowState = windowStateKeeper('main', {
-    width: 400,
-    height: 300
+    width: 1200,
+    height: 760
 });
 
 app.on('ready', function() {
@@ -57,9 +57,7 @@ app.on('ready', function() {
 
 });
 
-app.on('window-all-closed', function() {
-    app.quit();
-});
+
 
 
 var settingsWindow = null;
@@ -70,13 +68,12 @@ ipc.on('open-settings-window', function () {
     }
 
     settingsWindow = new BrowserWindow({
-        frame: false,
-        height: 200,
+        height: 400,
         resizable: false,
-        width: 200
+        width: 300
     });
 
-    settingsWindow.loadUrl('file://' + __dirname + '/app/settings.html');
+    settingsWindow.loadUrl('file://' + __dirname + '/windows/settings.html');
 
     settingsWindow.on('closed', function () {
         settingsWindow = null;
@@ -87,4 +84,12 @@ ipc.on('close-settings-window', function () {
     if (settingsWindow) {
         settingsWindow.close();
     }
+});
+
+//close all windows
+
+app.on('window-all-closed', function() {
+
+    app.quit();
+
 });
