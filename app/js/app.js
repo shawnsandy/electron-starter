@@ -5,6 +5,7 @@
 
 var ipc = require('ipc');
 
+
 var settingsBtn = document.getElementById('settings-btn');
 
 console.log(settingsBtn);
