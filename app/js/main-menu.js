@@ -55,6 +55,9 @@ module.exports.appMenu = function () {
             accelerator: "Command+A",
             selector: "selectAll:"
         }]
+    }, {
+        label: "Windows",
+        submenu: []
     },
         {
             label:"Help",
