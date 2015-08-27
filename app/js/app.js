@@ -15,3 +15,5 @@ settingsBtn.addEventListener('click', function(e){
     ipc.send('open-settings-window');
 
 });
+
+
