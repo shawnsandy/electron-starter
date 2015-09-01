@@ -86,6 +86,14 @@ ipc.on('close-settings-window', function () {
     }
 });
 
+
+/**
+ * sample call to change the current page displayed in the main window
+ */
+//ipc.on('load-page', function(){
+//    mainWindow.loadUrl('file://' + __dirname + '/app.html');
+//});
+
 //close all windows
 
 app.on('window-all-closed', function() {

@@ -8,3 +8,5 @@ Thumbs.db
 /tmp/
 
 app/images/icons/neutron.png
+
+app/vendor/bootstrap/.bower.json

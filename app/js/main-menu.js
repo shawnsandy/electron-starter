@@ -6,6 +6,8 @@
 var app = require('app');
 var Menu = require('menu');
 var BrowserWindow = require('browser-window');
+var ipc = require('ipc');
+var shell = require('shell');
 
 module.exports.appMenu = function () {
     // Create the Application's main menu
@@ -16,6 +18,15 @@ module.exports.appMenu = function () {
             selector: "orderFrontStandardAboutPanel:"
         }, {
             type: "separator"
+        }, {
+            label: "Settings",
+            accelerator: "Command+,",
+            click: function(){
+               console.log('settings commands');
+                shell.beep();
+                //settingsFunction();
+               // ipc.send('open-settings-window');
+            }
         }, {
             label: "Quit",
             accelerator: "Command+Q",
@@ -55,6 +66,9 @@ module.exports.appMenu = function () {
             accelerator: "Command+A",
             selector: "selectAll:"
         }]
+    }, {
+        label: "Windows",
+        submenu: []
     },
         {
             label:"Help",
