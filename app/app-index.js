@@ -4,6 +4,7 @@ var app = require('app');
 var Menu = require('menu');
 var ipc = require('ipc');
 var BrowserWindow = require('browser-window');
+var jQuery = require('jquery');
 var env = require('./vendor/electron_boilerplate/env_config');
 //var devHelper = require('./vendor/electron_boilerplate/dev_helper');
 var mainMenu = require('./js/main-menu');
@@ -23,7 +24,7 @@ var mainWindow;
 
 // Preserver of the window size and position between app launches.
 var mainWindowState = windowStateKeeper('main', {
-    width: 1200,
+    width: 1280,
     height: 760
 });
 
@@ -35,7 +36,11 @@ app.on('ready', function() {
         width: mainWindowState.width,
         height: mainWindowState.height,
         icon: __dirname + '/images/icons/neutron.png',
-        title: 'Deskit'
+        title: 'Deskit',
+        'min-width': 1280,
+        'min-height': 760,
+        frame: false
+
     });
 
     if (mainWindowState.isMaximized) {
@@ -70,7 +75,8 @@ ipc.on('open-settings-window', function () {
     settingsWindow = new BrowserWindow({
         height: 400,
         resizable: false,
-        width: 300
+        width: 300,
+        'always-on-top': true
     });
 
     settingsWindow.loadUrl('file://' + __dirname + '/windows/settings.html');
@@ -86,6 +92,29 @@ ipc.on('close-settings-window', function () {
     }
 });
 
+ipc.on('close-app', function(){
+    app.quit();
+});
+
+ipc.on('minimize-app', function(){
+    if(mainWindow.isMinimized()){
+        mainWindow.minimize();
+    } else {
+        mainWindow.minimize();
+    }
+
+});
+
+ipc.on('maximize-app', function(){
+    if(mainWindow.isMaximized()){
+       mainWindow.maximize()
+    } else {
+        mainWindow.unmaximize()
+    }
+});
+
+//app controls buttons
+
 
 /**
  * sample call to change the current page displayed in the main window
@@ -97,7 +126,5 @@ ipc.on('close-settings-window', function () {
 //close all windows
 
 app.on('window-all-closed', function() {
-
     app.quit();
-
 });
