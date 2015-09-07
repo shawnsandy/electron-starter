@@ -19,11 +19,15 @@ a {
 .flex {
     display: flex;
     justify-content: center;
-
-    // align-items: center;
     height: 100% !important;
     width: 100% !important;
     -webkit-app-region: no-drag;
+    &-vcenter{
+        align-items: center;
+    }
+    &-cols {
+        flex-direction: column;
+    }
 }
 .sidebar {
     height: 100% !important;
@@ -80,7 +84,18 @@ i {
     }
 }
 
-.nav a {
+.nav {
     -webkit-user-select: none;
     -webkit-app-region: no-drag;
+}
+
+.menu-icon {
+    width: auto;
+    height: 16px;
+}
+header {
+    height: 200px;
+    // background-color: darkgray;
+    border-bottom: 1px solid gainsboro;
+    color: white;
 }
