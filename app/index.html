@@ -6,65 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Deskit App</title>
 
-    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css">
+
     <!--<link rel="stylesheet" href="./vendor/packages/pure/pure-min.css"/>-->
     <link rel="stylesheet" href="./vendor/packages/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./vendor/packages/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css">
+    <!-- scripts -->
     <script src="vendor/electron_boilerplate/env_config.js"></script>
     <script src="vendor/electron_boilerplate/context_menu.js"></script>
     <script src="vendor/electron_boilerplate/external_links.js"></script>
     <script src="vendor/require.js"></script>
     <script>
-        requirejs(['app'], function (app) {});
+        //requirejs(['app'], function (app) {});
     </script>
-
 </head>
-<body>
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<body style="-webkit-app-region: drag">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-        </div>
+
         <div id="navbar" class="navbar-collapse collapse">
+            <p class="navbar-text">
+                <a id="close-app" href="#"><i class="fa fa-times-circle"></i></a>
+                <a id="maximize-app" href="#"><i class="fa fa-dot-circle-o"></i></a>
+                <a id="minimize-app" href="#"><i class="fa fa-minus-circle"></i></a>
+            </p>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <p class="navbar-text"><img class="menu-icon" src="images/deskit/deskit-icon-gray@0.5x.png" alt=""/></p>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
         </div>
     </div>
 </nav>
+<div class="flex">
+    <section class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li id="settings-btn" ><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </section>
 
-<div class="container-fluid">
-    <div class="flex">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim error excepturi quasi reiciendis
-            ullam, voluptate? Aliquam aliquid amet architecto blanditiis consectetur delectus deleniti dolorem dolorum
-            ducimus eius error, excepturi facere id laborum mollitia nisi nobis officiis optio perspiciatis quam qui
-            ratione reiciendis, saepe, sequi sint sit temporibus unde voluptas?</p>
+    <main>
+        <header>
+            <div class="flex flex-vcenter flex-cols">
+                <h1>
+                    <img src="images/deskit/deskit-logo@0.5x.png" alt="Deskit Logo"/>
+                </h1>
+
+                <p class="text-center">
+                    JAVASCRIPT / HTML5 desktop application toolkit.
+                </p>
+            </div>
+        </header>
+    <section>
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1>Lorem ipsum dolor.</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim error excepturi quasi reiciendis
+                        ullam, voluptate? Aliquam aliquid amet architecto blanditiis consectetur delectus deleniti dolorem dolorum
+                        ducimus eius error, excepturi facere id laborum mollitia nisi nobis officiis optio perspiciatis quam qui
+                        ratione reiciendis, saepe, sequi sint sit temporibus unde voluptas?</p>
+
+            </div>
+        </div>
     </div>
+        </section>
+    </main>
 </div>
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
+<script>window.$ = window.jQuery = require('./vendor/jquery/dist/jquery.min.js');</script>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./vendor/jquery/dist/jquery.min.js"></script>
 <script src="./vendor/packages/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
 <script>
     require('./js/app.js');
+
 </script>
 </body>
 </html>

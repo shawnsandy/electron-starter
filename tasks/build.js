@@ -39,7 +39,8 @@ var paths = {
         './bower_components/**',
         './vendor/**',
         './js/**',
-        './**/*.html'
+        './**/*.html',
+        './images/**/*.*'
     ],
 }
 
