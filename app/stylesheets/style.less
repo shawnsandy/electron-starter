@@ -12,6 +12,9 @@ body {
     color: darkgray;
 }
 
+nav {
+    background-color: darken( slategray, 5%);
+}
 h1,
 h2,
 h3 {
@@ -47,7 +50,7 @@ a {
     // justify-content: center;
     // align-items: center;
     height: 100% !important;
-    width: 40% !important;
+    width: 30% !important;
     max-width: 300px;
     min-width: 200px;
     padding: 20px;
@@ -82,16 +85,17 @@ a {
 }
 
 i {
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+    color: aliceblue;
     &.fa {
         font-size: 16px;
         font-size: 1.6rem;
         margin: 0 2px;
     }
-    -webkit-user-select: none;
-    -webkit-app-region: no-drag;
-    color: lightslategray;
+
     &:hover {
-        color: gray;
+        color: darken( aliceblue, 10%);;
     }
 }
 
