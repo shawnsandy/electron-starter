@@ -21,7 +21,9 @@
     "tests"
   ],
   "dependencies": {
+    "crayon": "*",
     "font-awesome": "fontawesome#~4.4.0",
+    "hover": "~2.0.2",
     "material-design-lite": "~1.0.4"
   },
   "devDependencies": {}
