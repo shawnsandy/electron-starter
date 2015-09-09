@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap": "~3.3.5",
     "crayon": "*",
     "font-awesome": "fontawesome#~4.4.0",
     "hover": "~2.0.2",
