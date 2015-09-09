@@ -22,7 +22,8 @@
   ],
   "dependencies": {
     "font-awesome": "fontawesome#~4.4.0",
-    "material-design-lite": "~1.0.4"
+    "material-design-lite": "~1.0.4",
+    "bootstrap": "~3.3.5"
   },
   "devDependencies": {}
 }
