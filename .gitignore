@@ -9,4 +9,4 @@ Thumbs.db
 
 app/images/icons/neutron.png
 
-app/vendor/bootstrap/.bower.json
+app/vendor/*
