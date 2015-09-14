@@ -6,3 +6,7 @@ Thumbs.db
 /build/
 /releases/
 /tmp/
+
+app/images/icons/neutron.png
+
+app/vendor/*

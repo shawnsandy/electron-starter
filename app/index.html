@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deskit App</title>
+
+
+    <!--<link rel="stylesheet" href="./vendor/packages/pure/pure-min.css"/>-->
+    <link rel="stylesheet" href="./vendor/packages/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./vendor/packages/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./vendor/packages/crayon/dist/crayon.css"/>
+    <link rel="stylesheet" href="./vendor/packages/hover/css/hover-min.css"/>
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css">
+    <!-- scripts -->
+    <script src="vendor/electron_boilerplate/env_config.js"></script>
+    <script src="vendor/electron_boilerplate/context_menu.js"></script>
+    <script src="vendor/electron_boilerplate/external_links.js"></script>
+    <script src="vendor/require.js"></script>
+    <script>
+        //requirejs(['app'], function (app) {});
+    </script>
+</head>
+<body style="-webkit-app-region: drag">
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <p class="navbar-text">
+                <a id="close-app" class="hvr-pulse" href="#"><i class="fa fa-times-circle"></i></a>
+                <a id="maximize-app" class="hvr-pulse" href="#"><i class="fa fa-dot-circle-o"></i></a>
+                <a id="minimize-app" class="hvr-pulse" href="#"><i class="fa fa-minus-circle"></i></a>
+            </p>
+            <ul class="nav navbar-nav navbar-right">
+                <p class="navbar-text"><img class="menu-icon" src="images/deskit/deskit-icon-gray@0.5x.png" alt=""/></p>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="flex">
+    <section class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li id="settings-btn"><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </section>
+
+    <main>
+        <header>
+            <div class="flex flex-vcenter flex-cols">
+                <h1>
+                    <img class="hvr-shrink" src="images/deskit/deskit-logo@0.5x.png" alt="Deskit Logo"/>
+                </h1>
+
+                <p class="text-center">
+                    HTML5/JAVASCRIPT UI Kit For Building Desktop Applications .
+                </p>
+            </div>
+        </header>
+        <section>
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h1>Lorem ipsum dolor.</h1>
+
+                        <p class="lead-off">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos enim
+                            error excepturi quasi reiciendis
+                            ullam, voluptate? Aliquam aliquid amet architecto blanditiis consectetur delectus deleniti
+                            dolorem dolorum
+                            ducimus eius error, excepturi facere id laborum mollitia nisi nobis officiis optio
+                            perspiciatis quam qui
+                            ratione reiciendis, saepe, sequi sint sit temporibus unde voluptas?
+                        </p>
+
+                    </div>
+                </div>
+                <section class="row features">
+                    <aside class="col-md-4"><h3>HTML5</h3></aside>
+                    <aside class="col-md-4"><h3>ES6</h3></aside>
+                    <aside class="col-md-4"><h3>REACT</h3></aside>
+                </section>
+            </div>
+        </section>
+    </main>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script>window.$ = window.jQuery = require('./vendor/jquery/dist/jquery.min.js');</script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./vendor/packages/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script>
+    require('./js/app.js');
+
+</script>
+</body>
+</html>

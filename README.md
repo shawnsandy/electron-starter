@@ -1,5 +1,15 @@
-electron-boilerplate
-==============
+# Deskit
+
+__Build Crossplatform HTML apps for the Desktop__
+
+__Features__
+
+- Copy & Paste for macs
+- Tabs
+- more soon
+
+__electron-boilerplate__
+
 Comprehensive boilerplate application for [Electron](http://electron.atom.io).  
 
 This project gives you mainly three things:
@@ -8,9 +18,8 @@ This project gives you mainly three things:
 2. Basic structure for Electron app.
 3. Scripts to generate installers of your app for all three operating systems.
 
-By the way, there is a twin project to this one: [nw-boilerplate](https://github.com/szwacz/nw-boilerplate), which is the same thing but for NW.js.
 
-# Quick start
+## Quick start
 The only development dependency of this project is [Node.js](https://nodejs.org). So just make sure you have it installed.
 Then type few commands known to every Node developer...
 ```
@@ -21,7 +30,7 @@ npm start
 ```
 ... and boom! You have running desktop application on your screen.
 
-# Structure of the project
+## Structure of the project
 
 There are **two** `package.json` files:  
 

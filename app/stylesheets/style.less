@@ -1,0 +1,129 @@
+html,
+body {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased !important;
+}
+body {
+    font-family: sans-serif;
+    padding-top: 50px;
+    color: darkgray;
+}
+
+nav {
+    background-color:darken(lightslategray, 10%);
+}
+h1,
+h2,
+h3 {
+    color: slategray;
+}
+p {
+    color: dimgray;
+    line-height: 1.8;
+}
+a {
+    text-decoration: none;
+}
+.subtitle {
+    color: gray;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    height: 100% !important;
+    width: 100% !important;
+    -webkit-app-region: no-drag;
+    &-vcenter{
+        align-items: center;
+    }
+    &-cols {
+        flex-direction: column;
+    }
+}
+.sidebar {
+    height: 100% !important;
+    background-color: lightslategray;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 100% !important;
+    width: 30% !important;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px;
+    color: aliceblue;
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        padding: 10px 0 10px 10px;
+        border-bottom: 1px solid darken(lightslategray, 5%);
+        width: 100%;
+        font-weight: bold;
+        &:hover {
+            background-color: darken(lightslategray, 2%);
+            padding-left: 20px;
+            cursor: pointer;
+        }
+    }
+    a {
+        &:link {
+            color: aliceblue;
+        }
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
+
+i {
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+    color: aliceblue;
+    &.fa {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 0 2px;
+    }
+
+    &:hover {
+        color: darken( aliceblue, 10%);;
+    }
+}
+
+.nav {
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.menu-icon {
+    width: auto;
+    height: 16px;
+}
+header {
+    height: 200px;
+    width: 100% important;
+    background-color: whitesmoke;
+    // border-bottom: 1px solid gainsboro;
+    //color: white;
+}
+
+.features {
+    h1, h2, h3 {
+        text-align: center;
+    }
+}
