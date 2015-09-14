@@ -10,3 +10,5 @@ Thumbs.db
 app/images/icons/neutron.png
 
 app/vendor/*
+
+*.psd
